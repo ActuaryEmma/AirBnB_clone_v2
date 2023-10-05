@@ -15,7 +15,7 @@ def do_pack():
         local("mkdir -p versions")
 
         archive_name = "versions/web_static_{}.tgz".format(timestamp)
-        local("tar-czvf {} web_static".format(archive_name))
+        local("tar -czvf {} web_static".format(archive_name))
 
         return archive_name
     except Exception:
