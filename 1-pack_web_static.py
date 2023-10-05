@@ -10,15 +10,12 @@ from datetime import datetime
 
 
 def do_pack():
-    try:
-        now = datetime.now()
-        timestamp = now.strftime("%Y%m%d%H%M%S")
+    now = datetime.now()
+    timestamp = now.strftime("%Y%m%d%H%M%S")
 
-        local("mkdir -p versions")
+    local("mkdir -p versions")
 
-        archive_name = "versions/web_static_{}.tgz".format(timestamp)
-        local("tar -czvf {} web_static".format(archive_name))
+    archive_name = "versions/web_static_{}.tgz".format(timestamp)
+    local("tar -czvf {} web_static".format(archive_name))
 
-        return archive_name
-    except Exception:
-        return None
+    return archive_name
