@@ -7,7 +7,7 @@ sudo service nginx start
 sudo mkdir -p /data/web_static/releases/
 sudo mkdir -p /data/web_static/shared
 sudo mkdir -p /data/web_static/releases/test/
-sudo echo "Test data for task 1" | sudo tee /data/web_static/releases/test/index.html > /dev/null 2>&1
+sudo echo "Test data for task 1" | sudo tee /data/web_static/releases/test/index.html > /dev/null
 sudo rm /data/web_static/current
 sudo ln -s /data/web_static/releases/test /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data/
