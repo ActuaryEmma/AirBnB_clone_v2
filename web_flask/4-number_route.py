@@ -27,9 +27,9 @@ def dis_text(text="is cool"):
     return f"Python {text.replace('_', ' ')}"
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def num_n(n):
-    return f"{int(n)} is a number"
+    return "{:d} is a number".format(n)
 
 
 if __name__ == '__main__':
