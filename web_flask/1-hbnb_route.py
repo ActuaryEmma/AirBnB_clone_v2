@@ -9,6 +9,8 @@ app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def index():
     return "Hello HBNB!"
+
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     return "HBNB"
